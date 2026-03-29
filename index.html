@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Faith Reformed Baptist Church | Sunbury, Ohio</title>
+  <meta
+    name="description"
+    content="Faith Reformed Baptist Church is a Reformed Baptist church in the Sunbury, Ohio area. Established 2026. Join us Sundays at 10:30 AM."
+  >
+  <meta
+    name="keywords"
+    content="Faith Reformed Baptist Church, Reformed Baptist church, Sunbury Ohio church, Baptist church Sunbury, Sunday worship Sunbury"
+  >
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Faith Reformed Baptist Church">
+  <link rel="canonical" href="https://faithreformedbaptist.church/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Faith Reformed Baptist Church">
+  <meta
+    property="og:description"
+    content="A Reformed Baptist church in the Sunbury, Ohio area. Join us Sundays at 10:30 AM."
+  >
+  <meta property="og:url" content="https://faithreformedbaptist.church/">
+  <meta property="og:site_name" content="Faith Reformed Baptist Church">
+  <meta property="og:image" content="https://faithreformedbaptist.church/assets/meeting-house.svg">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Faith Reformed Baptist Church">
+  <meta
+    name="twitter:description"
+    content="A Reformed Baptist church in the Sunbury, Ohio area. Sundays at 10:30 AM."
+  >
+  <meta name="twitter:image" content="https://faithreformedbaptist.church/assets/meeting-house.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Church",
+      "name": "Faith Reformed Baptist Church",
+      "url": "https://faithreformedbaptist.church/",
+      "description": "Faith Reformed Baptist Church is a Reformed Baptist church in the Sunbury, Ohio area.",
+      "foundingDate": "2026",
+      "image": "https://faithreformedbaptist.church/assets/meeting-house.svg",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "4063 Carters Corner Rd.",
+        "addressLocality": "Sunbury",
+        "addressRegion": "OH",
+        "postalCode": "43074",
+        "addressCountry": "US"
+      },
+      "location": {
+        "@type": "Place",
+        "name": "Kingston Township Hall",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "4063 Carters Corner Rd.",
+          "addressLocality": "Sunbury",
+          "addressRegion": "OH",
+          "postalCode": "43074",
+          "addressCountry": "US"
+        }
+      },
+      "event": {
+        "@type": "Event",
+        "name": "Sunday Worship",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "startDate": "2026-04-05T10:30:00-04:00",
+        "location": {
+          "@type": "Place",
+          "name": "Kingston Township Hall",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "4063 Carters Corner Rd.",
+            "addressLocality": "Sunbury",
+            "addressRegion": "OH",
+            "postalCode": "43074",
+            "addressCountry": "US"
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+  <main class="page-shell">
+    <section class="hero-card" aria-labelledby="site-title">
+      <div class="hero-mark">
+        <img src="assets/meeting-house.svg" alt="" width="120" height="120">
+      </div>
+
+      <p class="eyebrow">Established 2026</p>
+      <h1 id="site-title">Faith Reformed Baptist Church</h1>
+      <p class="lead">
+        Practicing the ordinary means of grace, through faith alone.
+      </p>
+
+      <p class="sr-only">
+        Faith Reformed Baptist Church is a Reformed Baptist church serving the
+        Sunbury, Ohio area. We gather for Sunday worship at 10:30 AM.
+      </p>
+
+      <dl class="details" aria-label="Church details">
+        <div class="detail-row">
+          <dt>Meeting Time</dt>
+          <dd>10:30 AM Sunday</dd>
+        </div>
+        <div class="detail-row">
+          <dt>Meeting Location</dt>
+          <dd>
+            <span id="next-sunday-location">Kingston Township Hall - 4063 Carters Corner Rd. Sunbury, Ohio</span>
+          </dd>
+        </div>
+      </dl>
+
+      <p class="note" id="next-sunday-note" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <script>
+    (function () {
+      var location = document.getElementById("next-sunday-location");
+      var note = document.getElementById("next-sunday-note");
+      if (!location || !note) return;
+
+      var now = new Date();
+      var nextSunday = new Date(now);
+      nextSunday.setHours(12, 0, 0, 0);
+
+      var day = nextSunday.getDay();
+      var daysUntilNextSunday = (7 - day) % 7;
+      if (daysUntilNextSunday === 0) {
+        daysUntilNextSunday = 7;
+      }
+
+      nextSunday.setDate(nextSunday.getDate() + daysUntilNextSunday);
+
+      var shortDate = nextSunday.toLocaleDateString("en-US", {
+        month: "numeric",
+        day: "numeric"
+      });
+
+      location.textContent = shortDate + " - " + location.textContent;
+      note.textContent = "Check here for next Sunday's meeting location.";
+    })();
+  </script>
+</body>
+</html>
