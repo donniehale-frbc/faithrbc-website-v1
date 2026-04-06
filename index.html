@@ -118,41 +118,20 @@
         <div class="detail-row">
           <dt>Meeting Location</dt>
           <dd>
-            <span id="next-sunday-location">Kingston Township Hall - 4063 Carters Corner Rd. Sunbury, Ohio</span>
+            <span class="meeting-location">
+              <span class="meeting-dates">4/12, 4/19</span>
+              <span class="meeting-place">Oxford Township Hall - 5125 Shoemaker Rd, Ashley, OH</span>
+            </span>
           </dd>
+        </div>
+        <div class="detail-row">
+          <dt>Upcoming Sermon</dt>
+          <dd>Titus 1:1-3 - A God-Centered Church (part 2)</dd>
         </div>
       </dl>
 
-      <p class="note" id="next-sunday-note" aria-live="polite"></p>
+      <p class="note">Check here for next Sunday's meeting location.</p>
     </section>
   </main>
-
-  <script>
-    (function () {
-      var location = document.getElementById("next-sunday-location");
-      var note = document.getElementById("next-sunday-note");
-      if (!location || !note) return;
-
-      var now = new Date();
-      var nextSunday = new Date(now);
-      nextSunday.setHours(12, 0, 0, 0);
-
-      var day = nextSunday.getDay();
-      var daysUntilNextSunday = (7 - day) % 7;
-      if (daysUntilNextSunday === 0) {
-        daysUntilNextSunday = 7;
-      }
-
-      nextSunday.setDate(nextSunday.getDate() + daysUntilNextSunday);
-
-      var shortDate = nextSunday.toLocaleDateString("en-US", {
-        month: "numeric",
-        day: "numeric"
-      });
-
-      location.textContent = shortDate + " - " + location.textContent;
-      note.textContent = "Check here for next Sunday's meeting location.";
-    })();
-  </script>
 </body>
 </html>
