@@ -101,10 +101,69 @@ h1 {
 
 .lead {
   width: min(560px, 100%);
-  margin: 20px auto 34px;
+  margin: 20px auto 18px;
   color: var(--muted);
   font-size: 1.15rem;
   line-height: 1.65;
+}
+
+.home-nav {
+  margin-bottom: 28px;
+}
+
+.home-nav a,
+.about-card a {
+  color: var(--frbc-slate-blue);
+  text-underline-offset: 0.2em;
+}
+
+.home-nav a,
+.about-nav a {
+  font-weight: 700;
+}
+
+.about-card {
+  text-align: left;
+  line-height: 1.6;
+}
+
+.about-nav {
+  margin-bottom: 24px;
+}
+
+.about-section {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+
+.about-section h2 {
+  margin: 0 0 6px;
+  color: var(--frbc-slate-blue);
+  font-family: "Mestiza FRBC", Georgia, serif;
+  font-size: 1.55rem;
+  line-height: 1.25;
+}
+
+.about-section p,
+.about-section ul {
+  margin: 0;
+}
+
+.about-section ul {
+  padding-left: 1.25em;
+}
+
+.about-section dl {
+  margin: 0;
+}
+
+.about-section dl div + div {
+  margin-top: 12px;
+}
+
+.about-card a {
+  overflow-wrap: anywhere;
 }
 
 .details {
